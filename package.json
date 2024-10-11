@@ -4,15 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "tslint -p tsconfig.json -c tslint.json",
-    "lint:fix": "tslint --fix -p tsconfig.json -c tslint.json"
+    "test": "hardhat test",
+    "lint": "tslint -p tsconfig.json -c eslint.json",
+    "lint:fix": "tslint --fix -p tsconfig.json -c eslint.json",
+    "start": "nodemon --watch './contracts' --watch './test' --ext 'ts,js,sol' --exec 'hardhat test'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/hash": "^5.7.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.13"
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "hardhat": "^2.22.13",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^1.2.0",
+    "@openzeppelin/contracts": "^5.0.2"
   }
 }

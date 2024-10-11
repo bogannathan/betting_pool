@@ -1,0 +1,7 @@
+{
+  "watch": ["contracts", "test", "scripts"],
+  "ext": "ts,sol",
+  "exec": "npx hardhat test",
+  "ignore": ["node_modules", "artifacts", "cache"],
+  "restartable": "rs"
+}
